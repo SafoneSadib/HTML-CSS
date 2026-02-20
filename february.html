@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background:#ffccd5;
+  font-family:sans-serif;
+}
+h1{color:#b30059;}
+button{
+  padding:10px 20px;
+  margin:10px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+#yes{background:#28a745;color:#fff;}
+#no{background:#dc3545;color:#fff;position:absolute;}
+#msg{font-size:22px;color:#800040;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+<button id="yes" onclick="accept()">Yes</button>
+<button id="no">No</button>
+<div id="msg"></div>
+
+<script>
+let no=document.getElementById("no");
+no.onmouseover=function(){
+  no.style.top=Math.random()*80+"vh";
+  no.style.left=Math.random()*80+"vw";
+};
+
+function accept(){
+  document.getElementById("msg").innerHTML="Thank you for accepting me ❤️";
+}
+</script>
+
+</body>
+</html>
